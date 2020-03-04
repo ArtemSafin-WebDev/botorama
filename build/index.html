@@ -18,6 +18,28 @@
                     <path d="M23.46 7a16.43 16.43 0 0111.66 4.83L23.46 23.5l11.66 11.66A16.49 16.49 0 1123.46 7zm0-7a23.51 23.51 0 1016.59 40.11l4.94-5-4.94-4.95-6.7-6.71 6.71-6.72L45 11.84l-4.94-5A23.27 23.27 0 0023.46 0z" />
                 </symbol>
                 <symbol viewBox="0 0 11 19" id="fb" xmlns="http://www.w3.org/2000/svg"><path d="M7.06 6.38V4.51c0-.84.19-1.26 1.49-1.26h1.64V.13H7.46C4.11.13 3 1.66 3 4.29v2.09H.81V9.5H3v9.38h4.06V9.5h2.76l.37-3.12z" /></symbol>
+                <symbol id="link" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <clipPath id="cclip-path"><path class="ccls-1" d="M0 0h16v16H0z" /></clipPath>
+                        <style>
+                            .ccls-1 {
+                                fill: none;
+                            }
+                            .ccls-2 {
+                                opacity: 0.6;
+                            }
+                            .ccls-3 {
+                                clip-path: url(#cclip-path);
+                            }
+                        </style>
+                    </defs>
+                    <g class="ccls-2">
+                        <g class="ccls-3">
+                            <path d="M15 0H9.51a1 1 0 000 2h3.12l-5.2 5.18a1 1 0 101.39 1.39L14 3.37v3.12a1 1 0 002 0V1a1 1 0 00-1-1z" />
+                            <path d="M11.33 14.31H1.69V4.67h7.25L10.63 3H.85a.85.85 0 00-.85.82v11.33a.85.85 0 00.85.85h11.33a.85.85 0 00.85-.85V5.37l-1.7 1.69z" />
+                        </g>
+                    </g>
+                </symbol>
                 <symbol viewBox="0 0 14 20" id="ok" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M12.83 10.74c-.28-.57-1.07-1.05-2.12-.24A6.84 6.84 0 017 11.64a6.84 6.84 0 01-3.71-1.14c-1-.81-1.84-.33-2.12.24-.5 1 .06 1.49 1.33 2.3A8.54 8.54 0 006 14.1l-.8.8-.03.1C4.06 16.07 3 17.14 2.25 17.88a1.14 1.14 0 000 1.62l.14.16a1.16 1.16 0 001.64 0l3-3c1.15 1.13 2.24 2.22 3 3a1.16 1.16 0 001.64 0l.13-.16a1.12 1.12 0 000-1.62l-3-3-.8-.79A8.35 8.35 0 0011.5 13c1.27-.77 1.83-1.26 1.33-2.26z"
@@ -48,33 +70,41 @@
                         <nav class="main-nav">
                             <ul class="main-nav__list">
                                 <li class="main-nav__list-item">
-                                    <a href="#" class="main-nav__link">Главная</a>
+                                    <a href="#home" class="main-nav__link js-anchor-link">Главная</a>
                                 </li>
                                 <li class="main-nav__list-item">
-                                    <a href="#" class="main-nav__link">Портфолио</a>
+                                    <a href="#portfolio" class="main-nav__link js-anchor-link">Портфолио</a>
                                 </li>
                                 <li class="main-nav__list-item">
-                                    <a href="#" class="main-nav__link">Калькулятор цен</a>
+                                    <a href="#calculator" class="main-nav__link js-anchor-link">Калькулятор цен</a>
                                 </li>
                                 <li class="main-nav__list-item">
-                                    <a href="#" class="main-nav__link">Тарифы</a>
+                                    <a href="#tariffs" class="main-nav__link js-anchor-link">Тарифы</a>
                                 </li>
                                 <li class="main-nav__list-item">
-                                    <a href="#" class="main-nav__link">Контакты</a>
+                                    <a href="#contacts" class="main-nav__link js-anchor-link">Контакты</a>
                                 </li>
                             </ul>
                         </nav>
                         <a href="#" class="page-header__contact-btn">
                             Связаться
                         </a>
+                        <a href="#" class="page-header__burger js-burger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
                     </div>
                 </div>
             </header>
-            <section class="intro">
+            <section class="intro" id="home">
                 <div class="container">
                     <h1 class="intro__main-heading">
                         Студия для маленьких проектов
                     </h1>
+                    <p class="intro__description">
+                        We are fully in-house digital agency helping companies in fintech and edtech rethink their visual identity, user experience, and marketing website
+                    </p>
                     <div class="intro__graphics-block">
                         <img src="img/intro-graphics.jpg" alt="" class="intro__graphics-block-image" />
                         <span class="intro__make-cool">
@@ -104,8 +134,12 @@
                     </div>
                 </div>
             </section>
-            <section class="portfolio">
+            <section class="portfolio" id="portfolio">
                 <div class="container">
+                    <h2 class="portfolio__heading">
+                        Portfolio
+                    </h2>
+
                     <div class="portfolio__grid js-portfolio-masonry">
                         <div class="portfolio__grid-column portfolio__grid-column--1"></div>
                         <div class="portfolio__grid-column portfolio__grid-column--2"></div>
@@ -279,11 +313,14 @@
                     </div>
                 </div>
             </section>
-            <section class="calculator js-calculator">
+            <section class="calculator js-calculator" id="calculator">
                 <div class="container">
                     <h2 class="calculator__heading">
                         Калькулятор цен
                     </h2>
+                    <p class="calculator__subtext">
+                        Что бы у нас заказать? Конечно, сайт и все, чтобы прокачать этот сайт!
+                    </p>
                     <div class="calculator__content">
                         <div class="calculator__row">
                             <div class="calculator__left-column">
@@ -472,7 +509,12 @@
                                 цифровых коммуникаций
                             </p>
                             <a href="#" class="how-we-work__learn-more-link">
-                                Узнать больше
+                                <span class="how-we-work__learn-more-link-text">
+                                    Узнать больше
+                                </span>
+                                <svg width="16" height="16" aria-hidden="true" class="icon-link">
+                                    <use xlink:href="#link" />
+                                </svg>
                             </a>
                         </div>
                         <div class="how-we-work__column">
@@ -485,7 +527,12 @@
                                 и дизайна
                             </p>
                             <a href="#" class="how-we-work__learn-more-link">
-                                Узнать больше
+                                <span class="how-we-work__learn-more-link-text">
+                                    Узнать больше
+                                </span>
+                                <svg width="16" height="16" aria-hidden="true" class="icon-link">
+                                    <use xlink:href="#link" />
+                                </svg>
                             </a>
                         </div>
                     </div>
@@ -498,24 +545,24 @@
                             <h2 class="callback__heading">
                                 Заказать обратный звонок
                             </h2>
-                            <form action="/" method="POST" class="callback__form">
+                            <form action="/" method="POST" class="callback__form" data-parsley-validate>
                                 <label class="callback__form-group">
                                     <span class="callback__form-label-text">
                                         Имя
                                     </span>
-                                    <input type="text" class="callback__form-input" placeholder="Ваше имя" />
+                                    <input type="text" class="callback__form-input" placeholder="Ваше имя" required />
                                 </label>
                                 <label class="callback__form-group">
                                     <span class="callback__form-label-text">
                                         Номер телефона
                                     </span>
-                                    <input type="tel" class="callback__form-input" placeholder="Мы перезвоним по этому номеру" />
+                                    <input type="tel" class="callback__form-input js-phone-input" placeholder="Мы перезвоним по этому номеру" required data-parsley-phone="" />
                                 </label>
                                 <label class="callback__form-group">
                                     <span class="callback__form-label-text">
                                         Email
                                     </span>
-                                    <input type="tel" class="callback__form-input" placeholder="Адрес электронной почты" />
+                                    <input type="email" class="callback__form-input" placeholder="Адрес электронной почты" required />
                                 </label>
                                 <button type="submit" class="callback__form-submit">
                                     Отправить
@@ -528,10 +575,11 @@
                     </div>
                 </div>
             </section>
-            <footer class="page-footer">
+            <footer class="page-footer" id="contacts">
                 <div class="container">
                     <p class="page-footer__have-concerns">
-                        Остались сомнения? Вы можете связаться с нами
+                        Остались сомнения?<br />
+                        Вы можете связаться с нами
                     </p>
                     <a href="mailto:info@botorama.com" class="page-footer__contact-link">info@botorama.com</a>
                     <a href="tel:+994 55 814 41 91" class="page-footer__contact-link">+994 55 814 41 91</a>

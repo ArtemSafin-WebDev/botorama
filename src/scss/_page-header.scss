@@ -2,16 +2,24 @@
     display: flex;
     align-items: center;
     padding: 1rem 0;
+    @include breakpoint(small-tablet) {
+        padding: 2rem 0;
+    }
 }
 
 
 .page-header__logo-link {
     margin-right: auto;
+
+    @include breakpoint(small-tablet) {
+        position: relative;
+        z-index: 300;
+    }
 }
 
 
 .page-header__logo-image {
-    max-width: 22rem;
+    width: 22rem;
     height: auto;
 }
 
@@ -28,6 +36,9 @@
     white-space: nowrap;
     user-select: none;
     transition: background-color .2s, color .2s;
+    @include breakpoint(small-tablet) {
+        display: none;
+    }
     &:link,
     &:visited {
         color: inherit;
@@ -36,5 +47,45 @@
     &:hover {
         background-color: var(--yellow);
         color: white;
+    }
+}
+
+
+
+.page-header__burger {
+    display: none;
+    @include breakpoint(small-tablet) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        position: relative;
+        z-index: 200;
+        & > span {
+            width: 24px;
+            height: 4px;
+            margin-bottom: 4px;
+            background-color: black;
+            transition: opacity .2s, transform .2s;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+
+        .menu-open & {
+            & > span {
+                &:nth-child(1) {
+                    transform: translateY(8px) rotate(45deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    transform: translateY(-8px) rotate(-45deg);
+                }
+            }
+        }
     }
 }

@@ -1,5 +1,12 @@
 .how-we-work {
     padding-top: 13.8rem;
+    @include breakpoint(small-tablet) {
+        padding-top: 8rem;
+    }
+
+    @include breakpoint(small-mobile) {
+        padding-top: 5.6rem;
+    }
 }
 
 
@@ -11,6 +18,11 @@
     text-align: center;
     line-height: 1.2;
     letter-spacing: 0.05em;
+    @include breakpoint(small-mobile) {
+        font-size: 2.4rem;
+        line-height: 3rem;
+        margin-bottom: 3.6rem;
+    }
 }
 
 .how-we-work__row {
@@ -18,12 +30,23 @@
     padding-bottom: 7.8rem;
     display: flex;
     border-bottom: 1px solid #C0C0C0;
+    @include breakpoint(small-mobile) {
+        display: block;
+    }
 }
 
 .how-we-work__column {
     width: 50%;
     padding: 0 4rem;
     text-align: center;
+    @include breakpoint(small-mobile) {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 5.6rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .how-we-work__we-do {
@@ -58,6 +81,15 @@
     line-height: 1.2;
     letter-spacing: 0.05em;
     text-decoration: underline;
+    .icon-link {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-left: 0.8rem;
+        flex-shrink: 0;
+        fill: rgba(#00A1FB, .6);
+        position: relative;
+        top: 2px;
+    }
     &:link,
     &:visited {
         color: var(--blue);

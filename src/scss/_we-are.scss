@@ -1,6 +1,17 @@
 .we-are {
-    padding: 14rem;
+    padding: 14rem 0;
     position: relative;
+    @include breakpoint(laptop) {
+        padding: 10rem 0;
+    }
+
+    @include breakpoint(tablet) {
+        padding: 7rem 0;
+    }
+
+    @include breakpoint(small-mobile) {
+        display: none;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -23,7 +34,15 @@
     text-align: center;
     color: var(--text-color);
     position: relative;
-  
+    @include breakpoint(small-tablet) {
+        padding: 8rem 12rem;
+    }
+    @include breakpoint(mobile) {
+        padding: 3rem 5rem;
+        br {
+            display: none;
+        }
+    }
 }
 
 

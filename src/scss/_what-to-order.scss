@@ -1,6 +1,9 @@
 
 .what-to-order {
     padding: 5rem 0;
+    @include breakpoint(small-mobile) {
+        display: none;
+    }
 }
 
 

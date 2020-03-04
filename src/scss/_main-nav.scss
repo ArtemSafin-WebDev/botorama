@@ -1,6 +1,37 @@
+.main-nav {
+    @include breakpoint(small-tablet) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: rgba(white, 0.8);
+        backdrop-filter: blur(15px);
+        text-align: center;
+        z-index: 200;
+        padding: 0 var(--content-padding);
+        padding-top: 9rem;
+        padding-bottom: 3rem;
+        height: 100vh;
+        overflow-x: hidden;
+
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s, visibility 0s linear 0.2s;
+        .menu-open & {
+            opacity: 1;
+            visibility: visible;
+            transition: all .2s;
+        }
+    }
+}
+
 .main-nav__list {
     display: flex;
     align-items: center;
+    @include breakpoint(small-tablet) {
+        flex-direction: column;
+        align-items: initial;
+    }
 }
 
 .main-nav__list-item {
@@ -8,16 +39,38 @@
     &:last-child {
         margin-right: 0;
     }
+
+    @include breakpoint(small-tablet) {
+        margin: 0;
+        margin-bottom: 4rem;
+        &:last-child {
+            margin: 0;
+        }
+    }
 }
 
 .main-nav__link {
     font-size: 1.6rem;
     line-height: 1.6;
     white-space: nowrap;
-    transition: color .2s;
+    transition: color 0.2s;
     &:link,
     &:visited {
         color: inherit;
+    }
+
+    @include breakpoint(small-tablet) {
+        font-size: 4rem;
+        font-weight: 700;
+        font-family: var(--source-pro);
+        &:link,
+        &:visited {
+            color: black;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
     }
 
     &:hover {

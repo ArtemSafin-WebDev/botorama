@@ -1,10 +1,21 @@
-
+.portfolio__heading {
+    display: none;
+    @include breakpoint(small-mobile) {
+        display: block;
+        margin-bottom: 2.5rem;
+        font-family: var(--source-pro);
+        font-size: 2.4rem;
+        line-height: 3rem;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 0.05em;
+    }
+}
 
 .portfolio__grid {
     display: flex;
     margin: 0 -1.5rem;
 }
-
 
 .portfolio__grid-column {
     width: 33.33%;
@@ -16,11 +27,25 @@
     &:nth-child(3) .portfolio__grid-item:first-child {
         margin-top: 12.8rem;
     }
+
+    &--3 {
+        @include breakpoint(small-tablet) {
+            display: none;
+        }
+    }
+
+    &--2 {
+        @include breakpoint(small-mobile) {
+            display: none;
+        }
+    }
 }
 
 .portfolio__grid-item {
     margin-bottom: 5rem;
-   
+    @include breakpoint(small-mobile) {
+        margin-bottom: 4rem;
+    }
 }
 
 .portfolio__card {
@@ -41,6 +66,7 @@
     letter-spacing: 0.05em;
     line-height: 1.2;
     margin-bottom: 1rem;
+   
 }
 
 .portfolio__card-description {

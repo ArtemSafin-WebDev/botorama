@@ -6,6 +6,9 @@
     &:not(:last-child) {
         & + * {
             margin-top: -4rem;
+            @include breakpoint(small-tablet) {
+                margin-top: 4rem;
+            }
         }
     }
     
@@ -19,24 +22,50 @@
     font-family: var(--source-pro);
     letter-spacing: 0.05em;
     margin-bottom: 4.7rem;
+
+    @include breakpoint(small-mobile) {
+        font-size: 2.4rem;
+        margin-bottom: 5rem;
+        line-height: 3rem;
+        white-space: initial;
+    }
 }
 
 
 .callback__row {
     display: flex;
     align-items: flex-start;
+    @include breakpoint(small-mobile) {
+        display: block;
+    }
 }
 
 
 .callback__left-column {
     width: 50%;
     padding-right: 12rem;
+    @include breakpoint(small-tablet) {
+        width: 60%;
+    }
+
+    @include breakpoint(small-mobile) {
+        width: 100%;
+        padding: 0;
+    }
 }
 
 
 .callback__right-column {
     width: 50%;
-    
+    @include breakpoint(small-tablet) {
+        width: 40%;
+    }
+
+    @include breakpoint(small-mobile) {
+        width: 100%;
+        padding: 0;
+        margin-top: 8rem;
+    }
 }
 
 .callback__form-group {
@@ -66,10 +95,13 @@
     font-size: 2rem;
     letter-spacing: 0.05em;
     padding: 1.6rem 2.4rem;
-    line-height: 1.6;
+    
+   
     @include placeholder {
         color: rgba(#111011, .3);
     }
+
+   
 }
 
 

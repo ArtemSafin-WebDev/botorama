@@ -2,12 +2,18 @@ import polyfills from './polyfills';
 import detectTouch from './detectTouch';
 import masonry from './portfolioGrid';
 import calculator from './calculator';
+import forms from './forms';
+import menu from './menu';
+import smoothScrolling from './smoothScrolling';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
     masonry();
     calculator();
+    forms();
+    menu();
+    smoothScrolling();
 });
 
 window.addEventListener('load', function() {
