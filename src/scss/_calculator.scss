@@ -1,0 +1,224 @@
+.calculator {
+    padding: 6rem 0;
+}
+
+.calculator__heading {
+    margin-bottom: 6rem;
+    font-family: var(--source-pro);
+    font-size: 3.6rem;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.05em;
+}
+
+.calculator__row {
+    display: flex;
+}
+
+.calculator__left-column {
+    width: 50%;
+    flex-grow: 1;
+    padding-right: 6rem;
+}
+
+.calculator__right-column {
+    width: 26rem;
+    flex-shrink: 0;
+    padding-left: 6rem;
+    border-left: 1px solid #c0c0c0;
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator__price-block {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.calculator__have-questions {
+    font-family: var(--roboto);
+    font-size: 1.8rem;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    margin-top: auto;
+}
+
+.calculator__have-questions-link {
+    font-family: var(--source-pro);
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    text-decoration: underline;
+    &:link,
+    &:visited {
+        color: var(--blue);
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.calculator__starting-price-text {
+    font-family: var(--roboto);
+    font-size: 1.8rem;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+}
+
+.calculator__price-amount {
+    font-family: var(--source-pro);
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+}
+
+.calculator__contact-btn {
+    font-family: var(--source-pro);
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    padding: 1.6rem 4rem;
+    border: 3px solid var(--yellow);
+    border-radius: 4rem;
+    margin-bottom: 2rem;
+    transition: background-color .2s, color .2s;
+    &:link,
+    &:visited {
+        color: inherit;
+    }
+
+    &:hover {
+        background-color: var(--yellow);
+        color: white;
+    }
+}
+
+
+.calculator__selection-group {
+    border-top: 1px solid #C0C0C0;
+}
+
+.calculator__selection-group-btn {
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    &:link,
+    &:visited {
+        color: inherit;
+    }
+}
+
+
+.calculator__selection-group-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .5s;
+}
+
+.calculator__selection-group-btn-text {
+    font-family: var(--roboto);
+    font-size: 2.4rem;
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+    width: 50%;
+    flex-grow: 1;
+}
+
+.calculator__selection-group-btn-action {
+    font-family: var(--source-pro);
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    color: var(--violet);
+    display: flex;
+    align-items: center;
+}
+
+.calculator__selection-group-btn-cross {
+    width: 1.6rem;
+    height: 1.6rem;
+    flex-shrink: 0;
+    margin-left: 1rem;
+    position: relative;
+    &::before,
+    &::after {
+        content: '';
+        background-color: var(--violet);
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform 0.2s;
+    }
+
+    &::after {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+}
+
+
+
+.calculator__selection-checkbox {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    margin-bottom: 2.4rem;
+    // &:last-child {
+    //     margin-bottom: 0;
+    // }
+}
+
+
+.calculator__selection-checkbox-input {
+    @include visuallyHidden();
+}
+
+
+.calculator__selection-checkbox-mark {
+    width: 2.4rem;
+    height: 2.4rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    margin-right: 0.7rem;
+    border: 1px solid #C0C0C0;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 1.6rem;
+        height: 1.6rem;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform .2s, opacity .2s;
+        opacity: 0;
+        background-color: var(--violet);
+        border-radius: 50%;
+    }
+}
+
+.calculator__selection-checkbox-input:checked ~ .calculator__selection-checkbox-mark::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.calculator__selection-checkbox-text {
+    font-family: var(--roboto);
+    font-size: 1.8rem;
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+}
+
+
+.calculator__selection-checkbox-text-blue {
+    color: var(--blue);
+}

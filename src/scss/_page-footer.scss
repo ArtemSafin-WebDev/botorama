@@ -1,0 +1,45 @@
+.page-footer {
+    background: #f9f9fd;
+    padding-top: 7rem;
+    padding-bottom: 2.4rem;
+}
+
+.page-footer__have-concerns {
+    font-family: var(--source-pro);
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 1.25;
+    letter-spacing: 0.05em;
+    color: rgba(#111011, 0.4);
+    margin-bottom: 1.5rem;
+    max-width: 64rem;
+}
+
+.page-footer__contact-link {
+    font-family: var(--source-pro);
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 1.25;
+    letter-spacing: 0.05em;
+    text-decoration-line: underline;
+    color: var(--blue);
+    margin-bottom: 1.5rem;
+    display: block;
+    &:link,
+    &:visited {
+        color: var(--blue);
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
+.page-footer__copyright {
+    font-family: var(--roboto);
+    font-size: 1.6rem;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    margin-top: 14rem;
+}

@@ -1,0 +1,98 @@
+
+.callback {
+    padding-top: 6.8rem;
+    position: relative;
+    z-index: 10;
+    &:not(:last-child) {
+        & + * {
+            margin-top: -4rem;
+        }
+    }
+    
+}
+
+.callback__heading {
+    font-weight: 700;
+    white-space: nowrap;
+    font-size: 3.6rem;
+    line-height: 1.2;
+    font-family: var(--source-pro);
+    letter-spacing: 0.05em;
+    margin-bottom: 4.7rem;
+}
+
+
+.callback__row {
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.callback__left-column {
+    width: 50%;
+    padding-right: 12rem;
+}
+
+
+.callback__right-column {
+    width: 50%;
+    
+}
+
+.callback__form-group {
+    margin-bottom: 2.4rem;
+    display: block;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.callback__form-label-text {
+    font-family: var(--roboto);
+    font-size: 1.6rem;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    color: #a6a6a6;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.callback__form-input {
+    width: 100%;
+    background: #f3f5fb;
+    border-radius: 0.8rem;
+    color: var(--text-color);
+    font-family: var(--roboto);
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+    padding: 1.6rem 2.4rem;
+    line-height: 1.6;
+    @include placeholder {
+        color: rgba(#111011, .3);
+    }
+}
+
+
+.callback__form-submit {
+    font: inherit;
+    background: var(--yellow);
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 2.4rem;
+    border-radius: 4rem;
+    font-family: var(--source-pro);
+    padding: 2.4rem 5.6rem;
+    letter-spacing: 0.05em;
+    margin-top: .8rem;
+    transition: background-color .2s;
+    &:hover {
+        background-color: darken(#FBCF00, 5%);
+    }
+}
+
+
+.callback__image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}

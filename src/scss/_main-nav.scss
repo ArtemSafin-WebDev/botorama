@@ -1,0 +1,26 @@
+.main-nav__list {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav__list-item {
+    margin-right: 3.2rem;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.main-nav__link {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    white-space: nowrap;
+    transition: color .2s;
+    &:link,
+    &:visited {
+        color: inherit;
+    }
+
+    &:hover {
+        color: var(--yellow);
+    }
+}

@@ -1,0 +1,69 @@
+.how-we-work {
+    padding-top: 13.8rem;
+}
+
+
+.how-we-work__heading {
+    font-family: var(--source-pro);
+    font-weight: 700;
+    font-size: 3.6rem;
+    margin-bottom: 6.4rem;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+}
+
+.how-we-work__row {
+    
+    padding-bottom: 7.8rem;
+    display: flex;
+    border-bottom: 1px solid #C0C0C0;
+}
+
+.how-we-work__column {
+    width: 50%;
+    padding: 0 4rem;
+    text-align: center;
+}
+
+.how-we-work__we-do {
+    font-family: var(--source-pro);
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    margin-bottom: 2.7rem;
+}
+
+.how-we-work__image {
+    height: 5rem;
+    width: auto;
+    margin-bottom: 2.2rem;
+    display: inline-block;
+}
+
+.how-we-work__name {
+    font-size: 2rem;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    font-family: var(--roboto);
+    margin-bottom: 1.8rem;
+}
+
+.how-we-work__learn-more-link {
+    color: var(--blue);
+    font-family: var(--source-pro);
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    text-decoration: underline;
+    &:link,
+    &:visited {
+        color: var(--blue);
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,40 @@
+.page-header__row {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+
+.page-header__logo-link {
+    margin-right: auto;
+}
+
+
+.page-header__logo-image {
+    max-width: 22rem;
+    height: auto;
+}
+
+
+.page-header__contact-btn {
+    font-weight: 700;
+    font-size: 1.6rem;
+    font-family: var(--source-pro, monospace);
+    padding: 1.6rem 4rem;
+    border-radius: 4rem;
+    border: 3px solid var(--yellow);
+    margin-left: 3.2rem;
+    flex-shrink: 0;
+    white-space: nowrap;
+    user-select: none;
+    transition: background-color .2s, color .2s;
+    &:link,
+    &:visited {
+        color: inherit;
+    }
+
+    &:hover {
+        background-color: var(--yellow);
+        color: white;
+    }
+}

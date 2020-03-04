@@ -1,0 +1,60 @@
+.marketing {
+    background-color: var(--violet);
+    color: white;
+    position: relative;
+    z-index: 1;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../img/marketing-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1;
+        opacity: .5;
+    }
+}
+
+
+.marketing__row {
+    display: flex;
+    align-items: center;
+    padding: 10.6rem 0;
+    .icon-bafsy-logo {
+        fill: var(--yellow);
+        flex-shrink: 0;
+        width: 4.5rem;
+        height: 4.5rem;
+        margin: 0 3rem;
+    }
+}
+
+
+.marketing__left-column,
+.marketing__right-column {
+    width: 50%;
+    flex-grow: 1;
+}
+
+
+.marketing__white-text {
+    font-family: var(--source-pro);
+    font-weight: 700;
+    font-size: 2.8rem;
+    line-height: 1.2;
+    text-align: right;
+}
+
+
+.marketing__yellow-text {
+    font-family: var(--source-pro);
+    font-weight: 700;
+    font-size: 2.8rem;
+    line-height: 1.8;
+    color: var(--yellow);
+    text-align: left;
+}
