@@ -6,6 +6,7 @@ import forms from './forms';
 import menu from './menu';
 import smoothScrolling from './smoothScrolling';
 import fixHeader from './fixHeader';
+import parallax from './parallax';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     menu();
     smoothScrolling();
     fixHeader();
+    parallax();
 });
 
 window.addEventListener('load', function() {

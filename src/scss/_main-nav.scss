@@ -20,7 +20,7 @@
         .menu-open & {
             opacity: 1;
             visibility: visible;
-            transition: all .2s;
+            transition: all 0.2s;
         }
     }
 }
@@ -75,5 +75,33 @@
 
     &:hover {
         color: var(--yellow);
+    }
+}
+
+.main-nav__contact-btn {
+    display: none;
+    margin-top: 3rem;
+    font-weight: 700;
+    font-size: 2.4rem;
+    font-family: var(--source-pro, monospace);
+    padding: 2rem 4rem;
+    border-radius: 4rem;
+    border: 3px solid var(--yellow);
+    
+    flex-shrink: 0;
+    white-space: nowrap;
+    user-select: none;
+    transition: background-color 0.2s, color 0.2s;
+    @include breakpoint(small-tablet) {
+        display: inline-block;
+    }
+    &:link,
+    &:visited {
+        color: inherit;
+    }
+
+    &:hover {
+        background-color: var(--yellow);
+        color: white;
     }
 }
