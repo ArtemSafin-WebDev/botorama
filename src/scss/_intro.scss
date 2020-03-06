@@ -16,7 +16,6 @@
     }
 }
 
-
 .intro__description {
     display: none;
     @include breakpoint(small-mobile) {
@@ -51,7 +50,6 @@
     }
 }
 
-
 .intro__graphics-block-image {
     height: 60rem;
     width: auto;
@@ -60,6 +58,24 @@
     @include breakpoint(small-mobile) {
         height: auto;
         width: 100%;
+    }
+}
+
+
+@keyframes make-cool-move {
+    from {
+        transform:  translate(-50%, -50%) translateY(0) matrix(0.97, -0.08, 0.24, 1, 0, 0) ;
+    }
+    to {
+        transform:  translate(-50%, -50%) translateY(45%) matrix(0.97, -0.08, 0.24, 1, 0, 0) ;
+    }
+}
+@keyframes start-creating-move {
+    from {
+        transform:  translate(-50%, -50%) translateY(0) matrix(0.97, 0.08, -0.24, 1, 0, 0) ;
+    }
+    to {
+        transform:  translate(-50%, -50%) translateY(-45%) matrix(0.97, 0.08, -0.24, 1, 0, 0) ;
     }
 }
 
@@ -79,9 +95,14 @@
     margin-left: -24rem;
     top: 50%;
     box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.16);
-    border-bottom-right-radius: .5rem;
+    border-bottom-right-radius: 0.5rem;
     white-space: nowrap;
-
+    animation-name: make-cool-move;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
     @include breakpoint(small-tablet) {
         display: none;
     }
@@ -101,12 +122,19 @@
     border-radius: 1.6rem;
     top: 50%;
     left: 50%;
-    background-color: #7100FE;
+    background-color: #7100fe;
     margin-left: 36rem;
     white-space: nowrap;
-    padding: .3rem 3rem;
+    padding: 0.3rem 3rem;
     font-weight: 400;
-    border-bottom-left-radius: .5rem;
+    border-bottom-left-radius: 0.5rem;
+
+    animation-name: start-creating-move;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
     @include breakpoint(small-tablet) {
         display: none;
     }
@@ -118,4 +146,86 @@
     &:hover {
         text-decoration: none;
     }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes yellow-blob {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-10%, 3%);
+    }
+}
+
+@keyframes violet-blob {
+    from {
+        transform: translate(4%, 4%);
+    }
+    to {
+        transform: translate(-3%, -1%);
+    }
+}
+
+.photomask-image {
+    transform-origin: 50% 50%;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-fill-mode: backwards;
+}
+
+.photomask-purple-blob {
+    animation-direction: alternate-reverse;
+    transform-origin: 50% 50%;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: backwards;
+}
+
+.photomask-yellow-part {
+    animation-name: yellow-blob;
+    transform-origin: 50% 50%;
+
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-fill-mode: backwards;
+}
+
+.photomask-violet-blob {
+    animation-name: violet-blob;
+    transform-origin: 50% 50%;
+
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-fill-mode: backwards;
+}
+
+.photomask-blue-blob {
+    transform-origin: 50% 50%;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-delay: 0.3s;
+    animation-fill-mode: backwards;
 }

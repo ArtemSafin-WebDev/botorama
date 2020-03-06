@@ -5,6 +5,7 @@ import calculator from './calculator';
 import forms from './forms';
 import menu from './menu';
 import smoothScrolling from './smoothScrolling';
+import fixHeader from './fixHeader';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     forms();
     menu();
     smoothScrolling();
+    fixHeader();
 });
 
 window.addEventListener('load', function() {

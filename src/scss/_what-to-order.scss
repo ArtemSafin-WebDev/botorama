@@ -1,20 +1,47 @@
-
 .what-to-order {
     padding: 5rem 0;
-    @include breakpoint(small-mobile) {
-        display: none;
+    padding-top: 0;
+
+    .website {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1.6rem;
+            height: 1.6rem;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14.72 12.75'%3E%3Cpath fill='%23fbcf00' d='M7.36 0L0 12.75h14.72L7.36 0z'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            @include breakpoint(small-mobile) {
+                display: none;
+            }
+        }
     }
 }
 
+.what-to-order__logo {
+    width: 4.5rem;
+    margin: 0 auto;
+    margin-bottom: 2.6rem;
+}
 
 .what-to-order__content {
     text-align: center;
     padding-top: 2.5rem;
     padding-bottom: 12rem;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(small-mobile) {
+        padding-top: 0;
+    }
     &::before {
         content: '';
-        background-color: #E6F6FF;
+        background-color: #e6f6ff;
         top: 3.2rem;
         bottom: 3.2rem;
         left: 50%;
@@ -23,9 +50,17 @@
         max-width: 86rem;
         z-index: -3;
         position: absolute;
+        @include breakpoint(small-mobile) {
+            max-width: none;
+            bottom: -6rem;
+            top: 0;
+            left: calc((100vw - 100%) / 2 * -1);
+            width: 100vw;
+            transform: none;
+
+        }
     }
 }
-
 
 .what-to-order__stars {
     z-index: -2;
@@ -34,6 +69,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: 75vw;
+    width: 130rem;
     max-width: none;
 }
 
@@ -45,15 +81,8 @@
     left: 50%;
     transform: translateX(-50%);
     width: auto;
+    max-width: none;
 }
-
-
-.what-to-order__logo {
-    width: 6rem;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-}
-
 
 .what-to-order__heading {
     font-family: var(--source-pro);
@@ -64,16 +93,22 @@
     color: black;
     max-width: 57rem;
     margin: 0 auto;
+    margin-top: 11rem;
+    @include breakpoint(small-mobile) {
+        margin-top: 4rem;
+        max-width: 80%;
+    }
 }
 
 .what-to-order__top-block {
     margin-bottom: 3.4rem;
+    @include breakpoint(small-mobile) {
+        margin-bottom: 2.5rem;
+    }
 }
 
 .what-to-order__bottom-block {
-
 }
-
 
 .what-to-order__text {
     font-family: var(--source-pro);
@@ -86,9 +121,13 @@
     color: white;
     max-width: 70rem;
     margin: 0 auto;
+
+    @include breakpoint(small-mobile) {
+        padding: 2rem 1rem;
+    }
     &::before {
         content: '';
-        background-color: rgba(#7100FE, 0.9);
+        background-color: rgba(#7100fe, 0.9);
         transform: perspective(600px) rotateX(20deg);
         position: absolute;
         border-radius: 1rem;
@@ -97,5 +136,22 @@
         width: 100%;
         height: 100%;
         z-index: -1;
+        pointer-events: none;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: -6rem;
+        right: -6rem;
+
+        top: -3.8rem;
+        bottom: -4rem;
+        background-image: url('../img/yellow-bars.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -2;
+        pointer-events: none;
     }
 }

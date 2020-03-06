@@ -1,5 +1,6 @@
 .we-are {
     padding: 14rem 0;
+    padding-bottom: 18rem;
     position: relative;
     @include breakpoint(laptop) {
         padding: 10rem 0;
@@ -9,9 +10,13 @@
         padding: 7rem 0;
     }
 
+
     @include breakpoint(small-mobile) {
-        display: none;
+        padding-bottom: 18rem;
     }
+   
+
+   
     &::before {
         content: '';
         position: absolute;
@@ -37,8 +42,8 @@
     @include breakpoint(small-tablet) {
         padding: 8rem 12rem;
     }
-    @include breakpoint(mobile) {
-        padding: 3rem 5rem;
+    @include breakpoint(small-mobile) {
+        padding: 6rem 2rem;
         br {
             display: none;
         }
@@ -53,12 +58,21 @@
     width: 7.3rem;
     height: 8rem;
     left: 0;
-    bottom: 4.3rem;
+    top: -5rem;
     background-size: contain;
     background-image: url('../img/bafsy-violet-logo.svg');
     background-position: center;
     background-repeat: no-repeat;
     margin-left: -2rem;
+    transform: scaleX(.6) scaleY(.8);
+    @include breakpoint(small-mobile) {
+        left: auto;
+        right: 100%;
+        margin-right: -4rem;
+        bottom: 18rem;
+        top: auto;
+        transform: none;
+    }
 }
 
 
@@ -73,7 +87,9 @@
     z-index: -1;
     width: 29rem;
     height: 27rem;
-   
+    @include breakpoint(small-mobile) {
+        top: -8rem;
+    }
 }
 .blue-blob {
     position: absolute;
@@ -87,6 +103,11 @@
    
     width: 28.6rem;
     height: 27.3rem;
+
+    @include breakpoint(mobile) {
+        bottom: -9rem;
+        right: -8rem;
+    }
 }
 
 .we-are__leading-text {
