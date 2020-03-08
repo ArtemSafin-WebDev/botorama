@@ -1,494 +1,514 @@
-{% set title = "Botorama - Главная страница" %}
-{% set activePage = "Home" %}
-{% extends "layout.html" %}
-{% block content %}
-    <section class="intro" id="home">
-        <div class="container">
-            <h1 class="intro__main-heading">
+{% set title = "Botorama - Главная страница" %} {% set activePage = "Home" %} {% extends "layout.html" %} {% block content %}
+<section class="intro" id="home">
+    <div class="container">
+        <h1 class="intro__main-heading">
             Студия для маленьких проектов
         </h1>
 
-            <div class="intro__graphics-block">
-                    <img src="img/stars-1.svg" alt="" class="intro__stars rellax" data-rellax-speed="-3">
-                    <img src="img/stars-2.svg" alt="" class="intro__stars rellax" data-rellax-speed="2">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 613 602" class="intro__graphics-block-image">
-                        <path d="M551.36 237.39c15.78 47.6-9 99.37-34.15 142.78-22.37 38.58-62.4 59.49-98.42 85.83-38.7 28.31-71.83 68.42-119.52 73.58-51.27 5.54-109.27-7.05-143.88-45.12-33.64-36.95-14-95.5-27.8-143.52-14.13-49.36-67.39-91-53.47-140.41s73.67-67.46 118.88-91.89c41.42-22.4 84.07-48.15 130.9-43.2 45.73 4.84 77.87 42.58 115.3 69.23 40.48 28.84 96.53 45.53 112.16 92.72z" style="isolation:isolate" opacity=".1" fill="#7100fe" fill-rule="evenodd" class="photomask-purple-blob"/><path d="M174 15.38a29.19 29.19 0 0110.75 2 28.22 28.22 0 019.12 5.79L174 42.06l19.87 18.87a28.55 28.55 0 01-11.71 6.67 29.67 29.67 0 01-13.64.64 28.84 28.84 0 01-12.34-5.54 26.85 26.85 0 01-8.13-10.42 25.49 25.49 0 01-2-12.83 25.78 25.78 0 014.6-12.21 27.68 27.68 0 0110.11-8.71A29.31 29.31 0 01174 15.38zm0-11.32a41.64 41.64 0 00-18.86 4.49A39.33 39.33 0 00140.74 21a36.9 36.9 0 00-6.55 17.39A36.38 36.38 0 00137 56.6a38.23 38.23 0 0011.59 14.84 40.85 40.85 0 0017.57 7.89 42.1 42.1 0 0019.42-.9 40.53 40.53 0 0016.67-9.5l8.42-8-8.42-8-11.39-10.87 11.44-10.87 8.43-8-8.43-8.06a39.89 39.89 0 00-13-8.23A41.6 41.6 0 00174 4.06z" fill="#fbcf00" class="photomask-yellow-part"/><path d="M132.37 258.26c6-51.41-10.11-114.39 28.62-148.72s99.19-8.37 150.8-10.28c50.53-1.86 102.93-23.72 148-.74 46.72 23.85 83.06 71.35 91.71 123.07 8.14 48.65-36.8 88-48.38 136-12.12 49.93 15.36 112.13-20.48 148.94s-97.32 31-148.17 24.2c-44.4-5.94-80.37-33.5-116.77-59.61-34.57-24.79-55.38-69.69-71.2-109.16-15.93-39.76-19.06-61.17-14.13-103.7z" style="isolation:isolate" fill="#00a1fb" opacity=".1" fill-rule="evenodd" class="photomask-blue-blob"/>
-                        <g mask="url(#a)"><path fill="none" d="M28-58.03h514.65v773H28z"/></g><path d="M500.3 473.8l-21.25-15.55-15.39 11.26-17.4-12.72H427v-23.91a33.86 33.86 0 012.58-13.68 35.05 35.05 0 017.89-11.65 36.83 36.83 0 0112-7.81 38.14 38.14 0 0128.39 0 36.9 36.9 0 0112 7.81 35.08 35.08 0 017.9 11.65 34 34 0 012.58 13.68zm-61.56-28.27h11.48l13.42 9.82L479 444.09l9.51 7v-18.21a23 23 0 00-1.72-9.33 24 24 0 00-5.36-8 25 25 0 00-8.16-5.33 25.84 25.84 0 00-19.35 0 25.17 25.17 0 00-8.16 5.33 24 24 0 00-5.36 8 23.17 23.17 0 00-1.72 9.33z" fill="#7100fe" class="photomask-violet-blob"/>
+        <div class="intro__graphics-block">
+            <img src="img/stars-1.svg" alt="" class="intro__stars rellax" data-rellax-speed="-3" />
+            <img src="img/stars-2.svg" alt="" class="intro__stars rellax" data-rellax-speed="2" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 613 602" class="intro__graphics-block-image">
+                <path
+                    d="M551.36 237.39c15.78 47.6-9 99.37-34.15 142.78-22.37 38.58-62.4 59.49-98.42 85.83-38.7 28.31-71.83 68.42-119.52 73.58-51.27 5.54-109.27-7.05-143.88-45.12-33.64-36.95-14-95.5-27.8-143.52-14.13-49.36-67.39-91-53.47-140.41s73.67-67.46 118.88-91.89c41.42-22.4 84.07-48.15 130.9-43.2 45.73 4.84 77.87 42.58 115.3 69.23 40.48 28.84 96.53 45.53 112.16 92.72z"
+                    style="isolation:isolate"
+                    opacity=".1"
+                    fill="#7100fe"
+                    fill-rule="evenodd"
+                    class="photomask-purple-blob"
+                />
+                <path
+                    d="M174 15.38a29.19 29.19 0 0110.75 2 28.22 28.22 0 019.12 5.79L174 42.06l19.87 18.87a28.55 28.55 0 01-11.71 6.67 29.67 29.67 0 01-13.64.64 28.84 28.84 0 01-12.34-5.54 26.85 26.85 0 01-8.13-10.42 25.49 25.49 0 01-2-12.83 25.78 25.78 0 014.6-12.21 27.68 27.68 0 0110.11-8.71A29.31 29.31 0 01174 15.38zm0-11.32a41.64 41.64 0 00-18.86 4.49A39.33 39.33 0 00140.74 21a36.9 36.9 0 00-6.55 17.39A36.38 36.38 0 00137 56.6a38.23 38.23 0 0011.59 14.84 40.85 40.85 0 0017.57 7.89 42.1 42.1 0 0019.42-.9 40.53 40.53 0 0016.67-9.5l8.42-8-8.42-8-11.39-10.87 11.44-10.87 8.43-8-8.43-8.06a39.89 39.89 0 00-13-8.23A41.6 41.6 0 00174 4.06z"
+                    fill="#fbcf00"
+                    class="photomask-yellow-part"
+                />
+                <path
+                    d="M132.37 258.26c6-51.41-10.11-114.39 28.62-148.72s99.19-8.37 150.8-10.28c50.53-1.86 102.93-23.72 148-.74 46.72 23.85 83.06 71.35 91.71 123.07 8.14 48.65-36.8 88-48.38 136-12.12 49.93 15.36 112.13-20.48 148.94s-97.32 31-148.17 24.2c-44.4-5.94-80.37-33.5-116.77-59.61-34.57-24.79-55.38-69.69-71.2-109.16-15.93-39.76-19.06-61.17-14.13-103.7z"
+                    style="isolation:isolate"
+                    fill="#00a1fb"
+                    opacity=".1"
+                    fill-rule="evenodd"
+                    class="photomask-blue-blob"
+                />
+                <g mask="url(#a)"><path fill="none" d="M28-58.03h514.65v773H28z" /></g>
+                <path
+                    d="M500.3 473.8l-21.25-15.55-15.39 11.26-17.4-12.72H427v-23.91a33.86 33.86 0 012.58-13.68 35.05 35.05 0 017.89-11.65 36.83 36.83 0 0112-7.81 38.14 38.14 0 0128.39 0 36.9 36.9 0 0112 7.81 35.08 35.08 0 017.9 11.65 34 34 0 012.58 13.68zm-61.56-28.27h11.48l13.42 9.82L479 444.09l9.51 7v-18.21a23 23 0 00-1.72-9.33 24 24 0 00-5.36-8 25 25 0 00-8.16-5.33 25.84 25.84 0 00-19.35 0 25.17 25.17 0 00-8.16 5.33 24 24 0 00-5.36 8 23.17 23.17 0 00-1.72 9.33z"
+                    fill="#7100fe"
+                    class="photomask-violet-blob"
+                />
 
-                        <defs>
-                            <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="613" height="602" >
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M422.076 121.067C463.652 142.704 508.065 164.496 529.725 206.075C552.038 248.907 553.568 300.777 539.831 347.114C526.719 391.342 494 426.522 456.436 453.289C422.028 477.808 380.298 484.039 338.571 490.529C294.461 497.389 247.119 513.318 207.956 491.934C168.552 470.419 157.705 421.075 137.714 380.859C116.628 338.44 84.308 298.526 88.3385 251.3C92.5907 201.477 120.684 154.796 159.679 123.49C197.503 93.1256 247.643 84.9462 296.112 84.4985C340.939 84.0845 382.322 100.378 422.076 121.067Z" fill="#C4C4C4" class="photomask-image"/>
-                            </mask>
-                        </defs>
+                <defs>
+                    <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="613" height="602">
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M422.076 121.067C463.652 142.704 508.065 164.496 529.725 206.075C552.038 248.907 553.568 300.777 539.831 347.114C526.719 391.342 494 426.522 456.436 453.289C422.028 477.808 380.298 484.039 338.571 490.529C294.461 497.389 247.119 513.318 207.956 491.934C168.552 470.419 157.705 421.075 137.714 380.859C116.628 338.44 84.308 298.526 88.3385 251.3C92.5907 201.477 120.684 154.796 159.679 123.49C197.503 93.1256 247.643 84.9462 296.112 84.4985C340.939 84.0845 382.322 100.378 422.076 121.067Z"
+                            fill="#C4C4C4"
+                            class="photomask-image"
+                        />
+                    </mask>
+                </defs>
 
-                        <g mask="url(#mask0)">
-                            <rect x="28" y="-58.0312" width="514.653" height="773" fill="url(#pattern0)"/>
-                        </g>
+                <g mask="url(#mask0)">
+                    <rect x="28" y="-58.0312" width="514.653" height="773" fill="url(#pattern0)" />
+                </g>
 
-                        <image height="100%" preserveAspectRatio="xMinYMin slice" width="100%" xlink:href="img/girl.jpg" mask="url(#mask0)"/>
+                <image height="100%" preserveAspectRatio="xMinYMin slice" width="100%" xlink:href="img/girl.jpg" mask="url(#mask0)" />
+            </svg>
 
-                    </svg>
-                
-                <span class="intro__make-cool">
+            <span class="intro__make-cool">
                 Давай делать крутое!
             </span>
-                <a href="#" class="intro__start-creating">
+            <a href="#calculator" class="intro__start-creating js-anchor-link">
                 Начать творить!
             </a>
-            </div>
         </div>
-    </section>
-    <section class="we-are">
-        <div class="container">
-            <div class="we-are__content">
-                <p class="we-are__leading-text">
-                Мы - <span class="marked">фрилансеры</span>, работающие для лучших<br/>
+    </div>
+</section>
+<section class="we-are">
+    <div class="container">
+        <div class="we-are__content">
+            <p class="we-are__leading-text">
+                Мы - <span class="marked">фрилансеры</span>, работающие для лучших<br />
                 студий веб-дизайна по всему миру.
             </p>
-                <p class="we-are__secondary-text">
-                Поэтому держим отличные <span class="marked">цены</span>, а в портфолио<br/>
-                сотни узнаваемых работ
+            <p class="we-are__secondary-text">
+                Поэтому держим отличные <span class="marked">цены</span>, а в портфолио<br />
+                сотни <a href="#portfolio" class="js-anchor-link">узнаваемых работ</a>
             </p>
 
-                <span class="yellow-blob"></span>
-                <span class="blue-blob"></span>
-                <span class="bafsy-violet"></span>
-            </div>
+            <span class="yellow-blob"></span>
+            <span class="blue-blob"></span>
+            <span class="bafsy-violet"></span>
         </div>
-    </section>
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <h2 class="portfolio__heading">
+    </div>
+</section>
+<section class="portfolio" id="portfolio">
+    <div class="container">
+        <h2 class="portfolio__heading">
             Портфолио
         </h2>
 
-            <div class="portfolio__grid js-portfolio-masonry">
-                <div class="portfolio__grid-column portfolio__grid-column--1"></div>
-                <div class="portfolio__grid-column portfolio__grid-column--2"></div>
-                <div class="portfolio__grid-column portfolio__grid-column--3"></div>
-                <div class="portfolio__grid-item">
-                    <div class="portfolio__card">
-                        <img src="img/portfolio/my-hospital.jpg" alt="" class="portfolio__card-image"/>
-                        <h5 class="portfolio__card-title">
+        <div class="portfolio__grid js-portfolio-masonry">
+            <div class="portfolio__grid-item">
+                <div class="portfolio__card">
+                    <img src="img/portfolio/my-hospital.jpg" alt="" class="portfolio__card-image" />
+                    <h5 class="portfolio__card-title">
                         Айдентика «Моей поликлиники»
                     </h5>
-                        <div class="portfolio__card-description">
-                            <p>
+                    <div class="portfolio__card-description">
+                        <p>
                             My Polyclinics for adults and children surprise visitors accustomed to the “old fashioned” standards of service
                         </p>
-                        </div>
-                        <a href="#" class="portfolio__card-link">
+                    </div>
+                    <a href="#" class="portfolio__card-link">
                         Подробнее
                     </a>
-                    </div>
                 </div>
-                <div class="portfolio__grid-item">
-                    <div class="portfolio__card">
-                        <img src="img/portfolio/fast-payments.jpg" alt="" class="portfolio__card-image"/>
-                        <h5 class="portfolio__card-title">
+            </div>
+            <div class="portfolio__grid-item">
+                <div class="portfolio__card">
+                    <img src="img/portfolio/fast-payments.jpg" alt="" class="portfolio__card-image" />
+                    <h5 class="portfolio__card-title">
                         Сайт Системы быстрых платежей
                     </h5>
-                        <div class="portfolio__card-description">
-                            <p>
+                    <div class="portfolio__card-description">
+                        <p>
                             Система быстрых платежей — новый сервис Банка России. Он позволяет мгновенно переводить деньги
                         </p>
-                        </div>
-                        <a href="#" class="portfolio__card-link">
+                    </div>
+                    <a href="#" class="portfolio__card-link">
                         Подробнее
                     </a>
-                    </div>
                 </div>
-                <div class="portfolio__grid-item">
-                    <div class="portfolio__card">
-                        <img src="img/portfolio/stoloto.jpg" alt="" class="portfolio__card-image"/>
-                        <h5 class="portfolio__card-title">
+            </div>
+            <div class="portfolio__grid-item">
+                <div class="portfolio__card">
+                    <img src="img/portfolio/stoloto.jpg" alt="" class="portfolio__card-image" />
+                    <h5 class="portfolio__card-title">
                         Третья версия магазина «Столото»
                     </h5>
-                        <div class="portfolio__card-description">
-                            <p>
+                    <div class="portfolio__card-description">
+                        <p>
                             У «Столото» есть собственный онлайн-магазин лотерей.
                         </p>
-                        </div>
-                        <a href="#" class="portfolio__card-link">
+                    </div>
+                    <a href="#" class="portfolio__card-link">
                         Подробнее
                     </a>
-                    </div>
                 </div>
+            </div>
 
-                <div class="portfolio__grid-item">
-                    <div class="portfolio__card">
-                        <img src="img/portfolio/umbrella.jpg" alt="" class="portfolio__card-image"/>
-                        <h5 class="portfolio__card-title">
+            <div class="portfolio__grid-item">
+                <div class="portfolio__card">
+                    <img src="img/portfolio/umbrella.jpg" alt="" class="portfolio__card-image" />
+                    <h5 class="portfolio__card-title">
                         «Амбрелла Ай-ти»
                     </h5>
-                        <div class="portfolio__card-description">
-                            <p>
+                    <div class="portfolio__card-description">
+                        <p>
                             Это серьезная компания, работающая с крупными клиентами по всему миру.
                         </p>
-                        </div>
-                        <a href="#" class="portfolio__card-link">
+                    </div>
+                    <a href="#" class="portfolio__card-link">
                         Подробнее
                     </a>
-                    </div>
                 </div>
+            </div>
 
-                <div class="portfolio__grid-item">
-                    <div class="portfolio__card">
-                        <img src="img/portfolio/tutor.jpg" alt="" class="portfolio__card-image"/>
-                        <h5 class="portfolio__card-title">
+            <div class="portfolio__grid-item">
+                <div class="portfolio__card">
+                    <img src="img/portfolio/tutor.jpg" alt="" class="portfolio__card-image" />
+                    <h5 class="portfolio__card-title">
                         Сайт «Тьютор»
                     </h5>
-                        <div class="portfolio__card-description">
-                            <p>
+                    <div class="portfolio__card-description">
+                        <p>
                             «Тьютор» — образовательный сайт с различными направлениями обучения.
                         </p>
-                        </div>
-                        <a href="#" class="portfolio__card-link">
+                    </div>
+                    <a href="#" class="portfolio__card-link">
                         Подробнее
                     </a>
-                    </div>
                 </div>
-                <div class="portfolio__grid-item">
-                    <div class="portfolio__card">
-                        <img src="img/portfolio/stoloto-interface.jpg" alt="" class="portfolio__card-image"/>
-                        <h5 class="portfolio__card-title">
+            </div>
+            <div class="portfolio__grid-item">
+                <div class="portfolio__card">
+                    <img src="img/portfolio/stoloto-interface.jpg" alt="" class="portfolio__card-image" />
+                    <h5 class="portfolio__card-title">
                         Интерфейс новогоднего проекта для «Столото»
                     </h5>
-                        <div class="portfolio__card-description">
-                            <p>
+                    <div class="portfolio__card-description">
+                        <p>
                             Фасад украсила огромная буква М, окаймленная стетоскопом. Это было красиво.
                         </p>
-                        </div>
-                        <a href="#" class="portfolio__card-link">
+                    </div>
+                    <a href="#" class="portfolio__card-link">
                         Подробнее
                     </a>
-                    </div>
                 </div>
+            </div>
 
-                <div class="portfolio__grid-item">
-                    <div class="portfolio__card">
-                        <img src="img/portfolio/my-hospital.jpg" alt="" class="portfolio__card-image"/>
-                        <h5 class="portfolio__card-title">
+            <div class="portfolio__grid-item">
+                <div class="portfolio__card">
+                    <img src="img/portfolio/my-hospital.jpg" alt="" class="portfolio__card-image" />
+                    <h5 class="portfolio__card-title">
                         Айдентика «Моей поликлиники»
                     </h5>
-                        <div class="portfolio__card-description">
-                            <p>
+                    <div class="portfolio__card-description">
+                        <p>
                             My Polyclinics for adults and children surprise visitors accustomed to the “old fashioned” standards of service
                         </p>
-                        </div>
-                        <a href="#" class="portfolio__card-link">
+                    </div>
+                    <a href="#" class="portfolio__card-link">
                         Подробнее
                     </a>
-                    </div>
                 </div>
-                <div class="portfolio__grid-item">
-                    <div class="portfolio__card">
-                        <img src="img/portfolio/fast-payments.jpg" alt="" class="portfolio__card-image"/>
-                        <h5 class="portfolio__card-title">
+            </div>
+            <div class="portfolio__grid-item">
+                <div class="portfolio__card">
+                    <img src="img/portfolio/fast-payments.jpg" alt="" class="portfolio__card-image" />
+                    <h5 class="portfolio__card-title">
                         Сайт Системы быстрых платежей
                     </h5>
-                        <div class="portfolio__card-description">
-                            <p>
+                    <div class="portfolio__card-description">
+                        <p>
                             Система быстрых платежей — новый сервис Банка России. Он позволяет мгновенно переводить деньги
                         </p>
-                        </div>
-                        <a href="#" class="portfolio__card-link">
+                    </div>
+                    <a href="#" class="portfolio__card-link">
                         Подробнее
                     </a>
-                    </div>
                 </div>
-                <div class="portfolio__grid-item">
-                    <div class="portfolio__card">
-                        <img src="img/portfolio/stoloto.jpg" alt="" class="portfolio__card-image"/>
-                        <h5 class="portfolio__card-title">
+            </div>
+            <div class="portfolio__grid-item">
+                <div class="portfolio__card">
+                    <img src="img/portfolio/stoloto.jpg" alt="" class="portfolio__card-image" />
+                    <h5 class="portfolio__card-title">
                         Третья версия магазина «Столото»
                     </h5>
-                        <div class="portfolio__card-description">
-                            <p>
+                    <div class="portfolio__card-description">
+                        <p>
                             У «Столото» есть собственный онлайн-магазин лотерей.
                         </p>
-                        </div>
-                        <a href="#" class="portfolio__card-link">
+                    </div>
+                    <a href="#" class="portfolio__card-link">
                         Подробнее
                     </a>
-                    </div>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="what-to-order">
-        <div class="container">
+    </div>
+</section>
+<section class="what-to-order">
+    <div class="container">
+        <img src="img/bafsy-yellow-logo.svg" alt="" class="what-to-order__logo" />
+        <div class="what-to-order__content">
+            <div class="what-to-order__stars">
+                <img src="img/order-stars-1.svg" alt="" data-rellax-percentage="0.5" class="rellax" />
+            </div>
+            <div class="what-to-order__stars">
+                <img src="img/order-stars-2.svg" alt="" data-rellax-percentage="0.5" data-rellax-speed="-2" class="rellax" />
+            </div>
 
-            <img src="img/bafsy-yellow-logo.svg" alt="" class="what-to-order__logo">
-            <div class="what-to-order__content">
-                <div class="what-to-order__stars">
-                     <img src="img/order-stars-1.svg" alt="" data-rellax-percentage="0.5" class="rellax"/>
-                </div>
-                <div class="what-to-order__stars">
-                    <img src="img/order-stars-2.svg" alt="" data-rellax-percentage="0.5" data-rellax-speed="-2" class="rellax"/>
-                </div>
-                
-                <img src="img/monitor.svg" alt="" class="what-to-order__monitor"/>
-                <div class="what-to-order__top-block">
-
-                    <h2 class="what-to-order__heading">
+            <img src="img/monitor.svg" alt="" class="what-to-order__monitor" />
+            <div class="what-to-order__top-block">
+                <h2 class="what-to-order__heading">
                     Что бы у нас заказать?
                 </h2>
-                </div>
-                <div class="what-to-order__bottom-block">
-                    <p class="what-to-order__text">
-                    Конечно, <span class="website">сайт</span> и все, чтобы прокачать этот сайт!
-                </p>
-                </div>
+            </div>
+            <div class="what-to-order__bottom-block">
+                <p class="what-to-order__text">Конечно, <span class="website">сайт</span> и все, чтобы прокачать этот сайт!</p>
             </div>
         </div>
-    </section>
-    <section class="calculator js-calculator" id="calculator">
-        <div class="container">
-            <h2 class="calculator__heading">
+    </div>
+</section>
+<section class="calculator js-calculator" id="calculator">
+    <div class="container">
+        <h2 class="calculator__heading">
             Калькулятор цен
         </h2>
 
-            <div class="calculator__content">
-                <div class="calculator__row">
-                    <div class="calculator__left-column">
-                        <div class="calculator__options">
-                            <div class="calculator__options-container">
-                                <div class="calculator__options-item calculator__options-item--long">
-                                    <label class="calculator__options-toggle">
-                                        <input type="checkbox" name="site" class="calculator__options-checkbox-input" checked disabled value="40000"/>
-                                        <span class="calculator__options-toggle-content">
-                                            <span class="calculator__options-toggle-text">
+        <div class="calculator__content">
+            <div class="calculator__row">
+                <div class="calculator__left-column">
+                    <div class="calculator__options">
+                        <div class="calculator__options-container">
+                            <div class="calculator__options-item calculator__options-item--long">
+                                <label class="calculator__options-toggle">
+                                    <input type="checkbox" name="site" class="calculator__options-checkbox-input" checked disabled value="40000" />
+                                    <span class="calculator__options-toggle-content">
+                                        <span class="calculator__options-toggle-text">
                                             Мне нужен сайт
                                         </span>
-                                            <span class="calculator__options-toggle-cross"></span>
-                                        </span>
-                                    </label>
-                                </div>
+                                        <span class="calculator__options-toggle-cross"></span>
+                                    </span>
+                                </label>
                             </div>
-                            <h4 class="calculator__additional-heading">
+                        </div>
+                        <h4 class="calculator__additional-heading">
                             И вдобавок:
                         </h4>
-                            <div class="calculator__options-container">
-                                <div class="calculator__options-item">
-                                    <label class="calculator__options-toggle">
-                                        <input type="checkbox" name="widget" class="calculator__options-checkbox-input" value="5000"/>
-                                        <span class="calculator__options-toggle-content">
-                                            <span class="calculator__options-toggle-text">
+                        <div class="calculator__options-container">
+                            <div class="calculator__options-item">
+                                <label class="calculator__options-toggle">
+                                    <input type="checkbox" name="widget" class="calculator__options-checkbox-input" value="5000" />
+                                    <span class="calculator__options-toggle-content">
+                                        <span class="calculator__options-toggle-text">
                                             Виджет
                                         </span>
-                                            <span class="calculator__options-toggle-cross"></span>
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="calculator__options-item">
-                                    <label class="calculator__options-toggle">
-                                        <input type="checkbox" name="banners" class="calculator__options-checkbox-input" value="6000"/>
-                                        <span class="calculator__options-toggle-content">
-                                            <span class="calculator__options-toggle-text">
+                                        <span class="calculator__options-toggle-cross"></span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="calculator__options-item">
+                                <label class="calculator__options-toggle">
+                                    <input type="checkbox" name="banners" class="calculator__options-checkbox-input" value="6000" />
+                                    <span class="calculator__options-toggle-content">
+                                        <span class="calculator__options-toggle-text">
                                             Баннеры
                                         </span>
-                                            <span class="calculator__options-toggle-cross"></span>
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="calculator__options-item">
-                                    <label class="calculator__options-toggle">
-                                        <input type="checkbox" name="polls" class="calculator__options-checkbox-input" value="7000"/>
-                                        <span class="calculator__options-toggle-content">
-                                            <span class="calculator__options-toggle-text">
+                                        <span class="calculator__options-toggle-cross"></span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="calculator__options-item">
+                                <label class="calculator__options-toggle">
+                                    <input type="checkbox" name="polls" class="calculator__options-checkbox-input" value="7000" />
+                                    <span class="calculator__options-toggle-content">
+                                        <span class="calculator__options-toggle-text">
                                             Опросы
                                         </span>
-                                            <span class="calculator__options-toggle-cross"></span>
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="calculator__options-item">
-                                    <label class="calculator__options-toggle">
-                                        <input type="checkbox" name="bots" class="calculator__options-checkbox-input" value="10000"/>
-                                        <span class="calculator__options-toggle-content">
-                                            <span class="calculator__options-toggle-text">
+                                        <span class="calculator__options-toggle-cross"></span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="calculator__options-item">
+                                <label class="calculator__options-toggle">
+                                    <input type="checkbox" name="bots" class="calculator__options-checkbox-input" value="10000" />
+                                    <span class="calculator__options-toggle-content">
+                                        <span class="calculator__options-toggle-text">
                                             Чат-боты
                                         </span>
-                                            <span class="calculator__options-toggle-cross"></span>
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="calculator__options-item">
-                                    <label class="calculator__options-toggle">
-                                        <input type="checkbox" name="games" class="calculator__options-checkbox-input" value="7000"/>
-                                        <span class="calculator__options-toggle-content">
-                                            <span class="calculator__options-toggle-text">
+                                        <span class="calculator__options-toggle-cross"></span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="calculator__options-item">
+                                <label class="calculator__options-toggle">
+                                    <input type="checkbox" name="games" class="calculator__options-checkbox-input" value="7000" />
+                                    <span class="calculator__options-toggle-content">
+                                        <span class="calculator__options-toggle-text">
                                             Корпоративные игры
                                         </span>
-                                            <span class="calculator__options-toggle-cross"></span>
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="calculator__options-item">
-                                    <label class="calculator__options-toggle">
-                                        <input type="checkbox" name="victorines" class="calculator__options-checkbox-input" value="6000"/>
-                                        <span class="calculator__options-toggle-content">
-                                            <span class="calculator__options-toggle-text">
+                                        <span class="calculator__options-toggle-cross"></span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="calculator__options-item">
+                                <label class="calculator__options-toggle">
+                                    <input type="checkbox" name="victorines" class="calculator__options-checkbox-input" value="6000" />
+                                    <span class="calculator__options-toggle-content">
+                                        <span class="calculator__options-toggle-text">
                                             Викторины
                                         </span>
-                                            <span class="calculator__options-toggle-cross"></span>
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="calculator__options-item">
-                                    <label class="calculator__options-toggle">
-                                        <input type="checkbox" name="promosites" class="calculator__options-checkbox-input" value="3000"/>
-                                        <span class="calculator__options-toggle-content">
-                                            <span class="calculator__options-toggle-text">
+                                        <span class="calculator__options-toggle-cross"></span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="calculator__options-item">
+                                <label class="calculator__options-toggle">
+                                    <input type="checkbox" name="promosites" class="calculator__options-checkbox-input" value="3000" />
+                                    <span class="calculator__options-toggle-content">
+                                        <span class="calculator__options-toggle-text">
                                             Промо сайты
                                         </span>
-                                            <span class="calculator__options-toggle-cross"></span>
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="calculator__options-item">
-                                    <label class="calculator__options-toggle">
-                                        <input type="checkbox" name="microsites" class="calculator__options-checkbox-input" value="6000"/>
-                                        <span class="calculator__options-toggle-content">
-                                            <span class="calculator__options-toggle-text">
+                                        <span class="calculator__options-toggle-cross"></span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="calculator__options-item">
+                                <label class="calculator__options-toggle">
+                                    <input type="checkbox" name="microsites" class="calculator__options-checkbox-input" value="6000" />
+                                    <span class="calculator__options-toggle-content">
+                                        <span class="calculator__options-toggle-text">
                                             Микро сайты
                                         </span>
-                                            <span class="calculator__options-toggle-cross"></span>
-                                        </span>
-                                    </label>
-                                </div>
+                                        <span class="calculator__options-toggle-cross"></span>
+                                    </span>
+                                </label>
                             </div>
                         </div>
                     </div>
-                    <div class="calculator__right-column">
-                        <div class="calculator__price-block">
-                            <div class="calculator__starting-price-text">
+                </div>
+                <div class="calculator__right-column">
+                    <div class="calculator__price-block">
+                        <div class="calculator__starting-price-text">
                             Итого от
                         </div>
 
-                            <div class="calculator__price-amount">
+                        <div class="calculator__price-amount">
                             50600₽
                         </div>
-                            <a href="#callback" class="calculator__contact-btn js-anchor-link">
+                        <a href="#callback" class="calculator__contact-btn js-anchor-link">
                             Связаться
                         </a>
 
-                            <div class="calculator__have-questions">
+                        <div class="calculator__have-questions">
                             Остались вопросы?
-                            <a href="#" class="calculator__have-questions-link">
+                            <a href="#contacts" class="calculator__have-questions-link js-anchor-link">
                                 Свяжитесь с нами
                             </a>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="marketing">
-        <div class="container">
-            <div class="marketing__row">
-                <div class="marketing__left-column">
-                    <p class="marketing__white-text">
-                    Микро сайты, виджеты, баннеры, опросы, чат-боты,<br/>
-                    корпоративные игры,<br/>
+    </div>
+</section>
+<section class="marketing">
+    <div class="container">
+        <div class="marketing__row">
+            <div class="marketing__left-column">
+                <p class="marketing__white-text">
+                    Микро сайты, виджеты, баннеры, опросы, чат-боты,<br />
+                    корпоративные игры,<br />
                     викторины
                 </p>
-                </div>
-                <svg width="45" height="45" aria-hidden="true" class="icon-bafsy-logo">
-                    <use xlink:href="#bafsy-logo"/>
-                </svg>
-                <div class="marketing__right-column">
-                    <p class="marketing__yellow-text">
-                    все, что сделает ваш<br/>
-                    маркетинг просто <br/>
+            </div>
+            <svg width="45" height="45" aria-hidden="true" class="icon-bafsy-logo">
+                <use xlink:href="#bafsy-logo" />
+            </svg>
+            <div class="marketing__right-column">
+                <p class="marketing__yellow-text">
+                    все, что сделает ваш<br />
+                    маркетинг просто <br />
                     огненным
                 </p>
-                </div>
             </div>
         </div>
-    </section>
-    <section class="how-we-work">
-        <div class="container">
-            <h2 class="how-we-work__heading">
+    </div>
+</section>
+<section class="how-we-work">
+    <div class="container">
+        <h2 class="how-we-work__heading">
             Как мы работаем
         </h2>
-            <div class="how-we-work__row">
-                <div class="how-we-work__column">
-                    <p class="how-we-work__we-do">
+        <div class="how-we-work__row">
+            <div class="how-we-work__column">
+                <p class="how-we-work__we-do">
                     Мы используем
                 </p>
-                    <img src="img/bafsy.jpg" alt="" class="how-we-work__image"/>
-                    <p class="how-we-work__name">
-                    Корпоративный конструктор<br/>
+                <img src="img/bafsy.jpg" alt="" class="how-we-work__image" />
+                <p class="how-we-work__name">
+                    Корпоративный конструктор<br />
                     цифровых коммуникаций
                 </p>
-                    <a href="#" class="how-we-work__learn-more-link">
-                        <span class="how-we-work__learn-more-link-text">
+                <a href="#" class="how-we-work__learn-more-link">
+                    <span class="how-we-work__learn-more-link-text">
                         Узнать больше
                     </span>
-                        <svg width="16" height="16" aria-hidden="true" class="icon-link">
-                            <use xlink:href="#link"/>
-                        </svg>
-                    </a>
-                </div>
-                <div class="how-we-work__column">
-                    <p class="how-we-work__we-do">
+                    <svg width="16" height="16" aria-hidden="true" class="icon-link">
+                        <use xlink:href="#link" />
+                    </svg>
+                </a>
+            </div>
+            <div class="how-we-work__column">
+                <p class="how-we-work__we-do">
                     Мы сотрудничаем с
                 </p>
-                    <img src="img/void.svg" alt="" class="how-we-work__image"/>
-                    <p class="how-we-work__name">
-                    Студия веб-разработки<br/>
+                <img src="img/void.svg" alt="" class="how-we-work__image" />
+                <p class="how-we-work__name">
+                    Студия веб-разработки<br />
                     и дизайна
                 </p>
-                    <a href="#" class="how-we-work__learn-more-link">
-                        <span class="how-we-work__learn-more-link-text">
+                <a href="#" class="how-we-work__learn-more-link">
+                    <span class="how-we-work__learn-more-link-text">
                         Узнать больше
                     </span>
-                        <svg width="16" height="16" aria-hidden="true" class="icon-link">
-                            <use xlink:href="#link"/>
-                        </svg>
-                    </a>
-                </div>
+                    <svg width="16" height="16" aria-hidden="true" class="icon-link">
+                        <use xlink:href="#link" />
+                    </svg>
+                </a>
             </div>
         </div>
-    </section>
-    <section class="callback" id="callback">
-        <div class="container">
-            <div class="callback__row">
-                <div class="callback__left-column">
-                    <h2 class="callback__heading">
+    </div>
+</section>
+<section class="callback" id="callback">
+    <div class="container">
+        <div class="callback__row">
+            <div class="callback__left-column">
+                <h2 class="callback__heading">
                     Заказать обратный звонок
                 </h2>
-                    <form action="/" method="POST" class="callback__form" data-parsley-validate>
-                        <label class="callback__form-group">
-                            <span class="callback__form-label-text">
+                <form action="/" method="POST" class="callback__form" data-parsley-validate>
+                    <label class="callback__form-group">
+                        <span class="callback__form-label-text">
                             Имя
                         </span>
-                            <input type="text" class="callback__form-input" placeholder="Ваше имя" required/>
-                        </label>
-                        <label class="callback__form-group">
-                            <span class="callback__form-label-text">
+                        <input type="text" class="callback__form-input" placeholder="Ваше имя" required />
+                    </label>
+                    <label class="callback__form-group">
+                        <span class="callback__form-label-text">
                             Номер телефона
                         </span>
-                            <input type="tel" class="callback__form-input js-phone-input" placeholder="Мы перезвоним по этому номеру" required data-parsley-phone=""/>
-                        </label>
-                        <label class="callback__form-group">
-                            <span class="callback__form-label-text">
+                        <input type="tel" class="callback__form-input js-phone-input" placeholder="Мы перезвоним по этому номеру" required data-parsley-phone="" />
+                    </label>
+                    <label class="callback__form-group">
+                        <span class="callback__form-label-text">
                             Email
                         </span>
-                            <input type="email" class="callback__form-input" placeholder="Адрес электронной почты" required/>
-                        </label>
-                        <button type="submit" class="callback__form-submit">
+                        <input type="email" class="callback__form-input" placeholder="Адрес электронной почты" required />
+                    </label>
+                    <button type="submit" class="callback__form-submit">
                         Отправить
                     </button>
-                    </form>
-                </div>
-                <div class="callback__right-column">
-                    <img src="img/callback.png" alt="" class="callback__image" width="620"/>
-                </div>
+                </form>
+            </div>
+            <div class="callback__right-column">
+                <img src="img/callback.png" alt="" class="callback__image" width="620" />
             </div>
         </div>
-    </section>
+    </div>
+</section>
 {% endblock %}

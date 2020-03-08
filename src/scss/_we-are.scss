@@ -125,6 +125,24 @@
     line-height: 2;
     letter-spacing: 0.05em;
     font-weight: 700;
+
+    a {
+        font-family: var(--source-pro);
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-decoration-line: underline;
+        color: var(--blue);
+        
+    
+        &:link,
+        &:visited {
+            color: var(--blue);
+        }
+    
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 
 

@@ -16,15 +16,18 @@
     "not ie <= 9"
   ],
   "dependencies": {
+    "animejs": "^3.1.0",
     "body-scroll-lock": "^2.6.4",
     "colcade": "^0.2.0",
     "core-js": "^3.1.4",
     "css-vars-ponyfill": "^2.1.2",
     "detect-it": "^3.0.5",
+    "imagesloaded": "^4.1.4",
     "inputmask": "^4.0.8",
     "jump.js": "^1.0.2",
     "lazysizes": "^5.2.0",
     "macy": "^2.5.1",
+    "masonry-layout": "^4.2.2",
     "moment": "^2.24.0",
     "object-fit-images": "^3.2.4",
     "parsleyjs": "^2.9.2",

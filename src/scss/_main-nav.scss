@@ -16,11 +16,11 @@
 
         opacity: 0;
         visibility: hidden;
-        transition: opacity 0.2s, visibility 0s linear 0.2s;
+        transition: opacity 0.5s, visibility 0s linear 0.5s;
         .menu-open & {
             opacity: 1;
             visibility: visible;
-            transition: all 0.2s;
+            transition: all 0.5s;
         }
     }
 }

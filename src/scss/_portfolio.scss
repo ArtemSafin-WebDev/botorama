@@ -14,35 +14,63 @@
 
 .portfolio__grid {
     display: flex;
+    flex-wrap: wrap;
     margin: 0 -1.5rem;
+
+    // margin-bottom: -5rem;
+    // @include breakpoint(small-mobile) {
+    //     margin-bottom: -4rem;
+    // }
 }
 
-.portfolio__grid-column {
-    width: 33.33%;
-    padding: 0 1.5rem;
-    flex-grow: 1;
-    &:nth-child(2) .portfolio__grid-item:first-child {
-        margin-top: 6.4rem;
-    }
-    &:nth-child(3) .portfolio__grid-item:first-child {
-        margin-top: 12.8rem;
-    }
+// .portfolio__grid-column {
+//     width: 33.33%;
+//     padding: 0 1.5rem;
+//     flex-grow: 1;
+//     &:nth-child(2) .portfolio__grid-item:first-child {
+//         margin-top: 6.4rem;
+//     }
+//     &:nth-child(3) .portfolio__grid-item:first-child {
+//         margin-top: 12.8rem;
+//     }
 
-    &--3 {
-        @include breakpoint(small-tablet) {
-            display: none;
-        }
-    }
+//     &--3 {
+//         @include breakpoint(small-tablet) {
+//             display: none;
+//         }
+//     }
 
-    &--2 {
-        @include breakpoint(small-mobile) {
-            display: none;
-        }
-    }
-}
+//     &--2 {
+//         @include breakpoint(small-mobile) {
+//             display: none;
+//         }
+//     }
+// }
 
 .portfolio__grid-item {
     margin-bottom: 5rem;
+    width: 33.33%;
+    padding: 0 1.5rem;
+    @include breakpoint(small-tablet) {
+        width: 50%;
+    }
+
+    @include breakpoint(small-mobile) {
+        width: 100%;
+    }
+
+    &:nth-child(2) {
+        margin-top: 6.4rem;
+        @include breakpoint(small-mobile) {
+            margin-top: 0;
+        }
+    }
+    &:nth-child(3) {
+        margin-top: 12.8rem;
+        @include breakpoint(small-tablet) {
+            margin-top: 0;
+        }
+    }
     @include breakpoint(small-mobile) {
         margin-bottom: 4rem;
     }
@@ -66,7 +94,6 @@
     letter-spacing: 0.05em;
     line-height: 1.2;
     margin-bottom: 1rem;
-   
 }
 
 .portfolio__card-description {
